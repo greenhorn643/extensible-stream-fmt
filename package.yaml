@@ -1,10 +1,10 @@
 name:                extensible-stream-fmt
 version:             0.1.0.0
-github:              "githubuser/extensible-stream-fmt"
+github:              "greenhorn643/extensible-stream-fmt"
 license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2022 Author name here"
+author:              "Alex Palmer"
+maintainer:          "alex.palmer643@gmail.com"
+copyright:           "2022 Alex Palmer"
 
 extra-source-files:
 - README.md
