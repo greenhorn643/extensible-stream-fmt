@@ -16,8 +16,8 @@ module Data.Extensible.StreamFmt.Schema.Internal.Types.Schema
 
 import           Control.Monad.Reader
 import           Data.Extensible.StreamFmt.Schema.Internal.Types.IndentState
-import           Data.Text.Lazy.Builder                             (Builder)
-import qualified Data.Text.Lazy.Builder                             as B
+import           Data.Text.Lazy.Builder                                      (Builder)
+import qualified Data.Text.Lazy.Builder                                      as B
 import           Data.Typeable
 
 class Schema a where

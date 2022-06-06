@@ -11,15 +11,15 @@ module Data.Extensible.StreamFmt.Schema.Internal.Primitives
 
 import           Data.Extensible.StreamFmt.Schema.Internal.Types.Schema
 
-import qualified Data.ByteString                               as B
-import qualified Data.ByteString.Lazy                          as LB
-import qualified Data.Text                                     as T
-import qualified Data.Text.Lazy                                as LT
-import Data.Kind
-import Data.Typeable
-import GHC.TypeLits
-import qualified Data.Text.Lazy.Builder as B
-import Data.Extensible.StreamFmt.Schema.Internal.Types.IndentState
+import qualified Data.ByteString                                             as B
+import qualified Data.ByteString.Lazy                                        as LB
+import           Data.Extensible.StreamFmt.Schema.Internal.Types.IndentState
+import           Data.Kind
+import qualified Data.Text                                                   as T
+import qualified Data.Text.Lazy                                              as LT
+import qualified Data.Text.Lazy.Builder                                      as B
+import           Data.Typeable
+import           GHC.TypeLits
 
 instance Schema Int
 

@@ -1,6 +1,6 @@
+{-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE DataKinds           #-}
 {-# LANGUAGE FlexibleContexts    #-}
-{-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE FlexibleInstances   #-}
 {-# LANGUAGE OverloadedStrings   #-}
 {-# LANGUAGE PolyKinds           #-}
@@ -17,9 +17,9 @@ import           Control.Monad.Reader
 import           Data.Extensible
 import           Data.Extensible.StreamFmt.Schema.Internal.Types.IndentState
 import           Data.Extensible.StreamFmt.Schema.Internal.Types.Schema
-import qualified Data.Text.Lazy                                     as T
-import           Data.Text.Lazy.Builder                             (Builder)
-import qualified Data.Text.Lazy.Builder                             as B
+import qualified Data.Text.Lazy                                              as T
+import           Data.Text.Lazy.Builder                                      (Builder)
+import qualified Data.Text.Lazy.Builder                                      as B
 import           GHC.TypeLits
 
 instance Forall (KeyTargetAre KnownSymbol Schema) xs => Schema (Variant xs) where

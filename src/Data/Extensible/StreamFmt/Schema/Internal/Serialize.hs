@@ -15,14 +15,13 @@ module Data.Extensible.StreamFmt.Schema.Internal.Serialize
   (
   ) where
 
-import           Control.Lens                                          hiding
-                                                                       ((:>))
+import           Control.Lens    hiding ((:>))
 import           Data.Extensible
 import           Data.Serialize
-import qualified Data.Text                                             as T
-import qualified Data.Text.Lazy                                        as LT
-import Data.Word
-import Data.VLE
+import qualified Data.Text       as T
+import qualified Data.Text.Lazy  as LT
+import           Data.VLE
+import           Data.Word
 
 class (Serialize (TargetOf kv), kv ∈ kvs) =>
       MemberAndSerializeV kvs kv

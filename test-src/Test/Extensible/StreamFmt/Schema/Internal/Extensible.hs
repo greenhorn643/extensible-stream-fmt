@@ -1,19 +1,19 @@
-{-# LANGUAGE TypeApplications #-}
-{-# LANGUAGE DataKinds #-}
-{-# LANGUAGE TypeOperators #-}
-{-# LANGUAGE QuasiQuotes #-}
+{-# LANGUAGE DataKinds         #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE QuasiQuotes       #-}
+{-# LANGUAGE TypeApplications  #-}
+{-# LANGUAGE TypeOperators     #-}
 module Test.Extensible.StreamFmt.Schema.Internal.Extensible where
 
-import Data.Extensible.StreamFmt.Schema.Internal.Extensible
+import           Data.Extensible
+import           Data.Extensible.StreamFmt.Schema.Internal.Extensible
+import           Data.Extensible.StreamFmt.Schema.Internal.Primitives
+import           Data.Extensible.StreamFmt.Schema.Internal.Types.Schema
 import           Test.Hspec
-import Data.Extensible
-import Text.RawString.QQ
-import Data.Extensible.StreamFmt.Schema.Internal.Types.Schema
-import Data.Extensible.StreamFmt.Schema.Internal.Primitives
+import           Text.RawString.QQ
 
-import Data.Text (Text)
-import Data.ByteString (ByteString)
+import           Data.ByteString                                        (ByteString)
+import           Data.Text                                              (Text)
 
 spec_RecordsToSchema :: Spec
 spec_RecordsToSchema =
@@ -124,7 +124,7 @@ spec_NestedToSchema =
   ]|] $
       schema @(Variant
       [ "a0" :> Variant
-        [ "a00" :> Variant 
+        [ "a00" :> Variant
           [ "a000" :> Int
           , "a001" :> Float
           ]

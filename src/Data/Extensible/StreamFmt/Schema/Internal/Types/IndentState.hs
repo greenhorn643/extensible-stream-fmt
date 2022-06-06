@@ -15,9 +15,9 @@ import qualified Data.Text.Lazy.Builder as B
 
 data IndentState =
   IndentState
-    { indentLevel       :: Int
-    , groupingRequired  :: Bool
-    , spacesPerIndent   :: Int
+    { indentLevel      :: Int
+    , groupingRequired :: Bool
+    , spacesPerIndent  :: Int
     }
 
 newLine :: Reader IndentState Builder
