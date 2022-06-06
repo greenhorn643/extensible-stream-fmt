@@ -1,0 +1,74 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+
+name:           extensible-stream-fmt
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/extensible-stream-fmt#readme>
+homepage:       https://github.com/githubuser/extensible-stream-fmt#readme
+bug-reports:    https://github.com/githubuser/extensible-stream-fmt/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/extensible-stream-fmt
+
+library
+  exposed-modules:
+      Data.Extensible.StreamFmt.Schema
+      Data.Extensible.StreamFmt.Schema.Internal.Extensible
+      Data.Extensible.StreamFmt.Schema.Internal.Primitives
+      Data.Extensible.StreamFmt.Schema.Internal.Serialize
+      Data.Extensible.StreamFmt.Schema.Internal.Types.IndentState
+      Data.Extensible.StreamFmt.Schema.Internal.Types.Schema
+  other-modules:
+      Paths_extensible_stream_fmt
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , cereal
+    , extensible
+    , lens
+    , mtl
+    , text
+    , vle
+  default-language: Haskell2010
+
+test-suite extensible-stream-fmt-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Test.Extensible.StreamFmt.Schema.Internal.Extensible
+      Test.Extensible.StreamFmt.Schema.Internal.Primitives
+      Paths_extensible_stream_fmt
+  hs-source-dirs:
+      test
+      test-src
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , cereal
+    , extensible
+    , extensible-stream-fmt
+    , hspec
+    , lens
+    , mtl
+    , raw-strings-qq
+    , tasty
+    , tasty-hspec
+    , text
+    , vle
+  default-language: Haskell2010
